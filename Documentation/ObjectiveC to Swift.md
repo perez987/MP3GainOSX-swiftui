@@ -1,6 +1,6 @@
 # Translate MP3GainExpress from Objective-C to Swift
 
-Replaces all Objective-C source files with Swift equivalents, preserving identical runtime behavior. No SwiftUI — AppKit/XIB UI is unchanged.
+Replaces all Objective-C source files with Swift equivalents, preserving identical runtime behavior. No SwiftUI. AppKit/XIB UI is unchanged.
 
 ## Files replaced
 
