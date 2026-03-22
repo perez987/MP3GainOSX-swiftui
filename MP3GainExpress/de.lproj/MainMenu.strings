@@ -16,11 +16,13 @@
 "5.title" = "Alle nach vorne bringen";
 "490.title" = "Hilfe";
 "492.title" = "MP3Gain Express Hilfe";
+"24.title" = "Fenster";
+"491.title" = "Hilfe";
 
 /* Main Window */
 "371.title" = "MP3Gain Express";
 "547.title" = "Ziel-\"Normal\"-Lautstärke:";
-"551.title" = "dB (Standard 89.0)";
+"551.title" = "(Standard 89.0 dB)";
 "623.title" = "Clipping verhindern";
 "T3j-wI-fiL.title" = "Albummodus";
 "566.title" = "Verstärkung anwenden";

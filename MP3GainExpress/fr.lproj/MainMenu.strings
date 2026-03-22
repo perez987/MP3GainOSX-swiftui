@@ -16,11 +16,14 @@
 "5.title" = "Tout ramener au premier plan";
 "490.title" = "Aide";
 "492.title" = "Aide de MP3Gain Express";
+"24.title" = "Fenêtre";
+"491.title" = "Aide";
+
 
 /* Main Window */
 "371.title" = "MP3Gain Express";
 "547.title" = "Volume \"Normal\" Cible:";
-"551.title" = "dB (Par défaut 89.0)";
+"551.title" = "(Par défaut 89.0 dB)";
 "623.title" = "Éviter l'écrêtage";
 "T3j-wI-fiL.title" = "Mode album";
 "566.title" = "Appliquer le gain";

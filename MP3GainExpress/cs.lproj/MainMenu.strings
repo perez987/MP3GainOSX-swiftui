@@ -16,11 +16,13 @@
 "5.title" = "Přenést vše do popředí";
 "490.title" = "Nápověda";
 "492.title" = "Nápověda MP3Gain Express";
+"24.title" = "Okno";
+"491.title" = "Nápověda";
 
 /* Main Window */
 "371.title" = "MP3Gain Express";
-"547.title" = "Cílová \"normální\" hlasitost:";
-"551.title" = "dB (Výchozí 89.0)";
+"547.title" = "Cílový \"normální\" hlasitost:";
+"551.title" = "(Výchozí 89.0 dB)";
 "623.title" = "Zabránit ořezávání";
 "T3j-wI-fiL.title" = "Režim alba";
 "566.title" = "Použít zesílení";

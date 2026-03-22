@@ -52,3 +52,7 @@ These are the main changes I've made to the project:
 - User interface improvements
 - Sparkle updated to version 2.9.0
 - Language support with language selector (menu language or `⌘ + L`)
+- Translate MP3GainExpress from Objective-C to Swift:
+   - replaces all Objective-C source files with Swift equivalents
+   - preserves app functionality
+   - no SwiftUI (MainMenu.xib is unchanged).

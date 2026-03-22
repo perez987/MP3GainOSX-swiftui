@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E2D2A322C64451B90713622 /* M3GLanguageSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95AA48C3D9E414285F8D821 /* M3GLanguageSelectorController.m */; };
-		9E3A2AE613C231B400E49A59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3A2AE513C231B400E49A59 /* main.m */; };
-		9E3A2AED13C231B400E49A59 /* Mp3GainMacAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3A2AEC13C231B400E49A59 /* Mp3GainMacAppDelegate.m */; };
 		9E3A2AF013C231B400E49A59 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AEE13C231B400E49A59 /* MainMenu.xib */; };
 		9E3A2AF713C237A000E49A59 /* AddSong.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AF613C237A000E49A59 /* AddSong.png */; };
 		9E3A2AFB13C23D5200E49A59 /* AddFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AF813C23D5200E49A59 /* AddFolder.png */; };
 		9E3A2AFC13C23D5200E49A59 /* ClearAll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AF913C23D5200E49A59 /* ClearAll.png */; };
 		9E3A2AFD13C23D5200E49A59 /* ClearSong.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AFA13C23D5200E49A59 /* ClearSong.png */; };
-		9E4132901D52DEE600F0A004 /* Mp3GainTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E41328F1D52DEE600F0A004 /* Mp3GainTask.m */; };
 		9E431AF41D4AFC2800A69E9D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E431AF31D4AFC2800A69E9D /* CoreFoundation.framework */; };
 		9E431AF61D4AFC3700A69E9D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E431AF51D4AFC3700A69E9D /* AppKit.framework */; };
 		9E431AF71D4AFC4800A69E9D /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E431AF81D4AFC4800A69E9D /* UniformTypeIdentifiers.framework */; };
 		9E46184C1EDBC36100C12330 /* aacgain in Resources */ = {isa = PBXBuildFile; fileRef = 9E46184B1EDBC36100C12330 /* aacgain */; };
-		9E48BC2A13C3F34A003BDC4F /* m3gInputList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E48BC2913C3F34A003BDC4F /* m3gInputList.m */; };
-		9E5E0AC11ED8D0E500B2D422 /* m3gPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E0AC01ED8D0E500B2D422 /* m3gPreferences.m */; };
-		9EA9F17713C278550036B145 /* m3gInputItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA9F17613C278550036B145 /* m3gInputItem.m */; };
 		9EB6852C1EB839E7003DD377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB6852B1EB839E7003DD377 /* Assets.xcassets */; };
-		9EBDFE2E1EB53E4300C0F9F4 /* M3GWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDFE2D1EB53E4300C0F9F4 /* M3GWindow.m */; };
+		AA000000000000000000AA02 /* m3gInputItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000AA01 /* m3gInputItem.swift */; };
+		AA000000000000000000AB02 /* Mp3GainMacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000AB01 /* Mp3GainMacAppDelegate.swift */; };
+		AA000000000000000000BB02 /* m3gPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB01 /* m3gPreferences.swift */; };
+		AA000000000000000000CC02 /* m3gInputList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000CC01 /* m3gInputList.swift */; };
+		AA000000000000000000DD02 /* Mp3GainTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000DD01 /* Mp3GainTask.swift */; };
+		AA000000000000000000EE02 /* M3GWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000EE01 /* M3GWindow.swift */; };
+		AA000000000000000000FF02 /* M3GLanguageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000FF01 /* M3GLanguageSelectorController.swift */; };
+		AA000000000000000000GG02 /* M3GPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000GG01 /* M3GPreferencesViewController.swift */; };
 		D9985E222F5F50E100D55DA7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D9985E202F5F50E100D55DA7 /* Credits.rtf */; };
 		D9B54D132F603C0300D5D009 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = D9B54D122F603C0300D5D009 /* Sparkle */; };
 		D9F96FB52F44E6EF00CA6066 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9F96FB42F44E6EF00CA6066 /* Localizable.strings */; };
@@ -45,30 +45,23 @@
 
 /* Begin PBXFileReference section */
 		9E3A2AD513C231B400E49A59 /* MP3GainExpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MP3GainExpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E3A2AE513C231B400E49A59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9E3A2AE713C231B400E49A59 /* MP3GainExpress-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MP3GainExpress-Prefix.pch"; sourceTree = "<group>"; };
-		9E3A2AEB13C231B400E49A59 /* Mp3GainMacAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mp3GainMacAppDelegate.h; sourceTree = "<group>"; };
-		9E3A2AEC13C231B400E49A59 /* Mp3GainMacAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mp3GainMacAppDelegate.m; sourceTree = "<group>"; };
 		9E3A2AF613C237A000E49A59 /* AddSong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddSong.png; sourceTree = "<group>"; };
 		9E3A2AF813C23D5200E49A59 /* AddFolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddFolder.png; sourceTree = "<group>"; };
 		9E3A2AF913C23D5200E49A59 /* ClearAll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClearAll.png; sourceTree = "<group>"; };
 		9E3A2AFA13C23D5200E49A59 /* ClearSong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClearSong.png; sourceTree = "<group>"; };
-		9E41328E1D52DEE600F0A004 /* Mp3GainTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3GainTask.h; sourceTree = "<group>"; };
-		9E41328F1D52DEE600F0A004 /* Mp3GainTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3GainTask.m; sourceTree = "<group>"; };
 		9E431AF31D4AFC2800A69E9D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9E431AF51D4AFC3700A69E9D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9E431AF81D4AFC4800A69E9D /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
 		9E46184B1EDBC36100C12330 /* aacgain */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aacgain; sourceTree = "<group>"; };
-		9E48BC2813C3F34A003BDC4F /* m3gInputList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m3gInputList.h; sourceTree = "<group>"; };
-		9E48BC2913C3F34A003BDC4F /* m3gInputList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = m3gInputList.m; sourceTree = "<group>"; };
-		9E5E0ABF1ED8D0E500B2D422 /* m3gPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m3gPreferences.h; sourceTree = "<group>"; };
-		9E5E0AC01ED8D0E500B2D422 /* m3gPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = m3gPreferences.m; sourceTree = "<group>"; };
-		9EA9F17513C278550036B145 /* m3gInputItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m3gInputItem.h; sourceTree = "<group>"; };
-		9EA9F17613C278550036B145 /* m3gInputItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = m3gInputItem.m; sourceTree = "<group>"; };
 		9EB6852B1EB839E7003DD377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9EBDFE2C1EB53E4300C0F9F4 /* M3GWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3GWindow.h; sourceTree = "<group>"; };
-		9EBDFE2D1EB53E4300C0F9F4 /* M3GWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3GWindow.m; sourceTree = "<group>"; };
-		A7B36F8FA6B74A8CB3D99761 /* M3GLanguageSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3GLanguageSelectorController.h; sourceTree = "<group>"; };
+		AA000000000000000000AA01 /* m3gInputItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m3gInputItem.swift; sourceTree = "<group>"; };
+		AA000000000000000000AB01 /* Mp3GainMacAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mp3GainMacAppDelegate.swift; sourceTree = "<group>"; };
+		AA000000000000000000BB01 /* m3gPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m3gPreferences.swift; sourceTree = "<group>"; };
+		AA000000000000000000CC01 /* m3gInputList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m3gInputList.swift; sourceTree = "<group>"; };
+		AA000000000000000000DD01 /* Mp3GainTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mp3GainTask.swift; sourceTree = "<group>"; };
+		AA000000000000000000EE01 /* M3GWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3GWindow.swift; sourceTree = "<group>"; };
+		AA000000000000000000FF01 /* M3GLanguageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3GLanguageSelectorController.swift; sourceTree = "<group>"; };
+		AA000000000000000000GG01 /* M3GPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3GPreferencesViewController.swift; sourceTree = "<group>"; };
 		D9069FB82F635ADC00F390A0 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		D9069FB92F635ADD00F390A0 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = el; path = el.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9069FBA2F635ADD00F390A0 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -94,7 +87,6 @@
 		D9C34D722F6363870076E48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = "Base.lproj/MP3GainExpress-Info.plist"; sourceTree = "<group>"; };
 		D9F96FB42F44E6EF00CA6068 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D9F96FB42F44E6EF00CA6069 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E95AA48C3D9E414285F8D821 /* M3GLanguageSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3GLanguageSelectorController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +107,7 @@
 		42BD50B5ED9E4011871A419A /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				A7B36F8FA6B74A8CB3D99761 /* M3GLanguageSelectorController.h */,
-				E95AA48C3D9E414285F8D821 /* M3GLanguageSelectorController.m */,
+				AA000000000000000000FF01 /* M3GLanguageSelectorController.swift */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -156,13 +147,10 @@
 				D9985E202F5F50E100D55DA7 /* Credits.rtf */,
 				42BD50B5ED9E4011871A419A /* Language */,
 				D9F96FB42F44E6EF00CA6066 /* Localizable.strings */,
-				9E3A2AE513C231B400E49A59 /* main.m */,
 				9E3A2AEE13C231B400E49A59 /* MainMenu.xib */,
 				D92A70FD2F42430900A5866C /* MP3GainExpress.entitlements */,
 				D9C34D732F6363870076E48F /* MP3GainExpress-Info.plist */,
-				9E3A2AE713C231B400E49A59 /* MP3GainExpress-Prefix.pch */,
-				9E3A2AEB13C231B400E49A59 /* Mp3GainMacAppDelegate.h */,
-				9E3A2AEC13C231B400E49A59 /* Mp3GainMacAppDelegate.m */,
+				AA000000000000000000AB01 /* Mp3GainMacAppDelegate.swift */,
 				D92A70F92F4240D500A5866C /* Preferences */,
 				D92A70FB2F42410100A5866C /* Process */,
 				9E3A2AE013C231B400E49A59 /* Supporting Files */,
@@ -193,8 +181,8 @@
 		D92A70F92F4240D500A5866C /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				9E5E0ABF1ED8D0E500B2D422 /* m3gPreferences.h */,
-				9E5E0AC01ED8D0E500B2D422 /* m3gPreferences.m */,
+				AA000000000000000000BB01 /* m3gPreferences.swift */,
+				AA000000000000000000GG01 /* M3GPreferencesViewController.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -202,8 +190,7 @@
 		D92A70FA2F4240EF00A5866C /* Window */ = {
 			isa = PBXGroup;
 			children = (
-				9EBDFE2C1EB53E4300C0F9F4 /* M3GWindow.h */,
-				9EBDFE2D1EB53E4300C0F9F4 /* M3GWindow.m */,
+				AA000000000000000000EE01 /* M3GWindow.swift */,
 			);
 			path = Window;
 			sourceTree = "<group>";
@@ -211,12 +198,9 @@
 		D92A70FB2F42410100A5866C /* Process */ = {
 			isa = PBXGroup;
 			children = (
-				9EA9F17513C278550036B145 /* m3gInputItem.h */,
-				9EA9F17613C278550036B145 /* m3gInputItem.m */,
-				9E48BC2813C3F34A003BDC4F /* m3gInputList.h */,
-				9E48BC2913C3F34A003BDC4F /* m3gInputList.m */,
-				9E41328E1D52DEE600F0A004 /* Mp3GainTask.h */,
-				9E41328F1D52DEE600F0A004 /* Mp3GainTask.m */,
+				AA000000000000000000AA01 /* m3gInputItem.swift */,
+				AA000000000000000000CC01 /* m3gInputList.swift */,
+				AA000000000000000000DD01 /* Mp3GainTask.swift */,
 			);
 			path = Process;
 			sourceTree = "<group>";
@@ -315,14 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E4132901D52DEE600F0A004 /* Mp3GainTask.m in Sources */,
-				9E3A2AE613C231B400E49A59 /* main.m in Sources */,
-				9EBDFE2E1EB53E4300C0F9F4 /* M3GWindow.m in Sources */,
-				9E3A2AED13C231B400E49A59 /* Mp3GainMacAppDelegate.m in Sources */,
-				9E5E0AC11ED8D0E500B2D422 /* m3gPreferences.m in Sources */,
-				9EA9F17713C278550036B145 /* m3gInputItem.m in Sources */,
-				9E48BC2A13C3F34A003BDC4F /* m3gInputList.m in Sources */,
-				6E2D2A322C64451B90713622 /* M3GLanguageSelectorController.m in Sources */,
+				AA000000000000000000DD02 /* Mp3GainTask.swift in Sources */,
+				AA000000000000000000EE02 /* M3GWindow.swift in Sources */,
+				AA000000000000000000AB02 /* Mp3GainMacAppDelegate.swift in Sources */,
+				AA000000000000000000BB02 /* m3gPreferences.swift in Sources */,
+				AA000000000000000000AA02 /* m3gInputItem.swift in Sources */,
+				AA000000000000000000CC02 /* m3gInputList.swift in Sources */,
+				AA000000000000000000FF02 /* M3GLanguageSelectorController.swift in Sources */,
+				AA000000000000000000GG02 /* M3GPreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,8 +477,6 @@
 				CURRENT_PROJECT_VERSION = 260;
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MP3GainExpress/MP3GainExpress-Prefix.pch";
 				INFOPLIST_FILE = "MP3GainExpress/Base.lproj/MP3GainExpress-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -502,13 +484,14 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 3.2.2;
+				MARKETING_VERSION = 3.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sappharad.${PRODUCT_NAME:rfc1034identifier}";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "com.sappharad.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MP3GainExpress;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -521,8 +504,6 @@
 				CURRENT_PROJECT_VERSION = 260;
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MP3GainExpress/MP3GainExpress-Prefix.pch";
 				INFOPLIST_FILE = "MP3GainExpress/Base.lproj/MP3GainExpress-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -530,13 +511,14 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 3.2.2;
+				MARKETING_VERSION = 3.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sappharad.${PRODUCT_NAME:rfc1034identifier}";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "com.sappharad.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MP3GainExpress;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
