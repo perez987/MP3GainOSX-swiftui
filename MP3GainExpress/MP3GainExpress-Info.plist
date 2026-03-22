@@ -42,7 +42,7 @@
 	<key>SUEnableSystemProfiling</key>
 	<false/>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/perez987/MP3GainOSX/master/appcast-new.xml</string>
+	<string>https://raw.githubusercontent.com/perez987/MP3GainOSX/master/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>ZlKWZcBX5/V65EwhgJe0G+veSzYUiYrpJZL9dLE8vjw=</string>
 	<key>SUScheduledCheckInterval</key>

@@ -74,10 +74,10 @@
 		D91B79CB2F603EC80032DDD6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = it; path = it.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D91B79CC2F603EC80032DDD6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D92A70FD2F42430900A5866C /* MP3GainExpress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MP3GainExpress.entitlements; sourceTree = "<group>"; };
+		D986FD812F70AEBE004B6006 /* MP3GainExpress-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MP3GainExpress-Info.plist"; sourceTree = "<group>"; };
 		D9985E212F5F50E100D55DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9985E232F5F50F300D55DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9985E242F5F50F400D55DA7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = es; path = es.lproj/Credits.rtf; sourceTree = "<group>"; };
-		D9C34D722F6363870076E48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = "Base.lproj/MP3GainExpress-Info.plist"; sourceTree = "<group>"; };
 		D9F96FB42F44E6EF00CA6068 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D9F96FB42F44E6EF00CA6069 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,7 +143,7 @@
 				D92A70F92F4240D500A5866C /* Model */,
 				BB000000000000000000AA01 /* MP3GainApp.swift */,
 				D92A70FD2F42430900A5866C /* MP3GainExpress.entitlements */,
-				D9C34D732F6363870076E48F /* MP3GainExpress-Info.plist */,
+				D986FD812F70AEBE004B6006 /* MP3GainExpress-Info.plist */,
 				D92A70FB2F42410100A5866C /* Process */,
 				9E3A2AE013C231B400E49A59 /* Supporting Files */,
 				C08AB9742F6EEDC200EF114A /* Views */,
@@ -321,14 +321,6 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		D9C34D732F6363870076E48F /* MP3GainExpress-Info.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9C34D722F6363870076E48F /* Base */,
-			);
-			name = "MP3GainExpress-Info.plist";
-			sourceTree = "<group>";
-		};
 		D9F96FB42F44E6EF00CA6066 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -455,7 +447,7 @@
 				CURRENT_PROJECT_VERSION = 288;
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "MP3GainExpress/Base.lproj/MP3GainExpress-Info.plist";
+				INFOPLIST_FILE = "MP3GainExpress/MP3GainExpress-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,7 +474,7 @@
 				CURRENT_PROJECT_VERSION = 288;
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "MP3GainExpress/Base.lproj/MP3GainExpress-Info.plist";
+				INFOPLIST_FILE = "MP3GainExpress/MP3GainExpress-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
