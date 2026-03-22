@@ -21,7 +21,7 @@ struct ContentView: View {
             bottomBar
         }
         .frame(minWidth: 700, idealWidth: 700, maxWidth: 700,
-               minHeight: 400, idealHeight: 400, maxHeight: 700)
+               minHeight: 410, idealHeight: 410, maxHeight: 700)
         .background(VisualEffectView().ignoresSafeArea())
         .sheet(isPresented: $viewModel.isProcessing) {
             ProcessingSheetView().environmentObject(viewModel)
