@@ -20,7 +20,7 @@ MP3Gain is a tool to increase or decrease the volume of MP3 files without re-enc
 
 ## Plattform
 
-- macOS 13+ (SwiftUI table requirement)
+- macOS 13+ (`SwiftUI.Table` availability)
 - Xcode 15+
 
 ## License information
