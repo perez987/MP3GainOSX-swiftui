@@ -45,7 +45,7 @@ See the orignal website for more details:
 
 These are the main changes I've made to the project:
 
-- Fix large file lists (faster table view)
+- Fix large file lists crash
 - Simplified progress window
 - Improved memory management
 - Modern filetype handling
