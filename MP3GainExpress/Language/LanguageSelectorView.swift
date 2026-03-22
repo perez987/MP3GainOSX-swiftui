@@ -42,7 +42,7 @@ struct LanguageSelectorView: View {
                      .stroke(.tertiary, lineWidth: 1)
                      .padding(5)
              )
-            .frame(width: 222, height: CGFloat(supportedLanguages.count) * 36 + 32)
+            .frame(width: 222, height: CGFloat(supportedLanguages.count) * 36 + 36)
 
             HStack {
                 Spacer()
@@ -65,7 +65,7 @@ struct LanguageSelectorView: View {
             }
         }
         .padding()
-        .frame(width: 300)
+        .frame(width: 300, height: 400)
         .onAppear { loadCurrentLanguage() }
         .alert(
             NSLocalizedString("Language changed alert title", comment: "Language Changed"),
