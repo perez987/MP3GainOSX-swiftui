@@ -3,7 +3,7 @@ MP3GainOSX
 
 MP3Gain Express for macOS.
 
-![Main window](Images/Window1.png)
+![Main window](Images/Window1-swiftui.png)
 
 **Note**: *Paul Kratt* is the developer of MP3GainOSX. This is the content of the original README. At the end you can read the changes I've made to the project.
 
