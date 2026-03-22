@@ -29,4 +29,3 @@ Replaces all Objective-C source files with Swift equivalents, preserving identic
 - All ObjC `PBXBuildFile`/`PBXFileReference` entries replaced with Swift equivalents
 - `GCC_PRECOMPILE_PREFIX_HEADER` / `GCC_PREFIX_HEADER` removed from both Debug and Release configs
 - `SWIFT_VERSION = 5.0` added to target build settings
-

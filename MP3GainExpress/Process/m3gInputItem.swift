@@ -5,7 +5,8 @@
 
 import Foundation
 
-class m3gInputItem: NSObject {
+class m3gInputItem: NSObject, Identifiable {
+    let id = UUID()
     var filePath: URL?
     var volume: Double = 0
     var clipping: Bool = false

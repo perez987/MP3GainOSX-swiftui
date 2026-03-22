@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E3A2AF013C231B400E49A59 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AEE13C231B400E49A59 /* MainMenu.xib */; };
 		9E3A2AF713C237A000E49A59 /* AddSong.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AF613C237A000E49A59 /* AddSong.png */; };
 		9E3A2AFB13C23D5200E49A59 /* AddFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AF813C23D5200E49A59 /* AddFolder.png */; };
 		9E3A2AFC13C23D5200E49A59 /* ClearAll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3A2AF913C23D5200E49A59 /* ClearAll.png */; };
@@ -18,13 +17,14 @@
 		9E46184C1EDBC36100C12330 /* aacgain in Resources */ = {isa = PBXBuildFile; fileRef = 9E46184B1EDBC36100C12330 /* aacgain */; };
 		9EB6852C1EB839E7003DD377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB6852B1EB839E7003DD377 /* Assets.xcassets */; };
 		AA000000000000000000AA02 /* m3gInputItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000AA01 /* m3gInputItem.swift */; };
-		AA000000000000000000AB02 /* Mp3GainMacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000AB01 /* Mp3GainMacAppDelegate.swift */; };
 		AA000000000000000000BB02 /* m3gPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB01 /* m3gPreferences.swift */; };
 		AA000000000000000000CC02 /* m3gInputList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000CC01 /* m3gInputList.swift */; };
 		AA000000000000000000DD02 /* Mp3GainTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000DD01 /* Mp3GainTask.swift */; };
-		AA000000000000000000EE02 /* M3GWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000EE01 /* M3GWindow.swift */; };
-		AA000000000000000000FF02 /* M3GLanguageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000FF01 /* M3GLanguageSelectorController.swift */; };
-		AA000000000000000000GG02 /* M3GPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000GG01 /* M3GPreferencesViewController.swift */; };
+		BB000000000000000000AA02 /* MP3GainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000000000000000000AA01 /* MP3GainApp.swift */; };
+		BB000000000000000000AB02 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000000000000000000AB01 /* AppViewModel.swift */; };
+		BB000000000000000000AC02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000000000000000000AC01 /* ContentView.swift */; };
+		BB000000000000000000AD02 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000000000000000000AD01 /* PreferencesView.swift */; };
+		BB000000000000000000AE02 /* LanguageSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000000000000000000AE01 /* LanguageSelectorView.swift */; };
 		D9985E222F5F50E100D55DA7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D9985E202F5F50E100D55DA7 /* Credits.rtf */; };
 		D9B54D132F603C0300D5D009 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = D9B54D122F603C0300D5D009 /* Sparkle */; };
 		D9F96FB52F44E6EF00CA6066 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9F96FB42F44E6EF00CA6066 /* Localizable.strings */; };
@@ -55,32 +55,25 @@
 		9E46184B1EDBC36100C12330 /* aacgain */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aacgain; sourceTree = "<group>"; };
 		9EB6852B1EB839E7003DD377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA000000000000000000AA01 /* m3gInputItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m3gInputItem.swift; sourceTree = "<group>"; };
-		AA000000000000000000AB01 /* Mp3GainMacAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mp3GainMacAppDelegate.swift; sourceTree = "<group>"; };
 		AA000000000000000000BB01 /* m3gPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m3gPreferences.swift; sourceTree = "<group>"; };
 		AA000000000000000000CC01 /* m3gInputList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m3gInputList.swift; sourceTree = "<group>"; };
 		AA000000000000000000DD01 /* Mp3GainTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mp3GainTask.swift; sourceTree = "<group>"; };
-		AA000000000000000000EE01 /* M3GWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3GWindow.swift; sourceTree = "<group>"; };
-		AA000000000000000000FF01 /* M3GLanguageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3GLanguageSelectorController.swift; sourceTree = "<group>"; };
-		AA000000000000000000GG01 /* M3GPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3GPreferencesViewController.swift; sourceTree = "<group>"; };
-		D9069FB82F635ADC00F390A0 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		BB000000000000000000AA01 /* MP3GainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3GainApp.swift; sourceTree = "<group>"; };
+		BB000000000000000000AB01 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		BB000000000000000000AC01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB000000000000000000AD01 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		BB000000000000000000AE01 /* LanguageSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectorView.swift; sourceTree = "<group>"; };
 		D9069FB92F635ADD00F390A0 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = el; path = el.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9069FBA2F635ADD00F390A0 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D9069FBB2F635AE400F390A0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		D9069FBC2F635AE400F390A0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = cs; path = cs.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9069FBD2F635AE400F390A0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D91B79C42F603EBA0032DDD6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		D91B79C52F603EBA0032DDD6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D91B79C62F603EBA0032DDD6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D91B79C72F603EC10032DDD6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		D91B79C82F603EC10032DDD6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D91B79C92F603EC20032DDD6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D91B79CA2F603EC80032DDD6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		D91B79CB2F603EC80032DDD6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = it; path = it.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D91B79CC2F603EC80032DDD6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D92A70FD2F42430900A5866C /* MP3GainExpress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MP3GainExpress.entitlements; sourceTree = "<group>"; };
-		D94C907D2F437916002C5ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D94C907D2F437916002C5ED5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		D94C907D2F437916002C5ED6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		D9985E212F5F50E100D55DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9985E232F5F50F300D55DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9985E242F5F50F400D55DA7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = es; path = es.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -107,7 +100,8 @@
 		42BD50B5ED9E4011871A419A /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				AA000000000000000000FF01 /* M3GLanguageSelectorController.swift */,
+				BB000000000000000000AE01 /* LanguageSelectorView.swift */,
+				D9F96FB42F44E6EF00CA6066 /* Localizable.strings */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -146,15 +140,13 @@
 				9EB6852B1EB839E7003DD377 /* Assets.xcassets */,
 				D9985E202F5F50E100D55DA7 /* Credits.rtf */,
 				42BD50B5ED9E4011871A419A /* Language */,
-				D9F96FB42F44E6EF00CA6066 /* Localizable.strings */,
-				9E3A2AEE13C231B400E49A59 /* MainMenu.xib */,
+				D92A70F92F4240D500A5866C /* Model */,
+				BB000000000000000000AA01 /* MP3GainApp.swift */,
 				D92A70FD2F42430900A5866C /* MP3GainExpress.entitlements */,
 				D9C34D732F6363870076E48F /* MP3GainExpress-Info.plist */,
-				AA000000000000000000AB01 /* Mp3GainMacAppDelegate.swift */,
-				D92A70F92F4240D500A5866C /* Preferences */,
 				D92A70FB2F42410100A5866C /* Process */,
 				9E3A2AE013C231B400E49A59 /* Supporting Files */,
-				D92A70FA2F4240EF00A5866C /* Window */,
+				C08AB9742F6EEDC200EF114A /* Views */,
 			);
 			path = MP3GainExpress;
 			sourceTree = "<group>";
@@ -165,6 +157,15 @@
 				D92A70F82F423D3F00A5866C /* Toolbar-icons */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C08AB9742F6EEDC200EF114A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB000000000000000000AC01 /* ContentView.swift */,
+				BB000000000000000000AD01 /* PreferencesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D92A70F82F423D3F00A5866C /* Toolbar-icons */ = {
@@ -178,21 +179,13 @@
 			path = "Toolbar-icons";
 			sourceTree = "<group>";
 		};
-		D92A70F92F4240D500A5866C /* Preferences */ = {
+		D92A70F92F4240D500A5866C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB000000000000000000AB01 /* AppViewModel.swift */,
 				AA000000000000000000BB01 /* m3gPreferences.swift */,
-				AA000000000000000000GG01 /* M3GPreferencesViewController.swift */,
 			);
-			path = Preferences;
-			sourceTree = "<group>";
-		};
-		D92A70FA2F4240EF00A5866C /* Window */ = {
-			isa = PBXGroup;
-			children = (
-				AA000000000000000000EE01 /* M3GWindow.swift */,
-			);
-			path = Window;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D92A70FB2F42410100A5866C /* Process */ = {
@@ -283,7 +276,6 @@
 				9EB6852C1EB839E7003DD377 /* Assets.xcassets in Resources */,
 				D9985E222F5F50E100D55DA7 /* Credits.rtf in Resources */,
 				9E46184C1EDBC36100C12330 /* aacgain in Resources */,
-				9E3A2AF013C231B400E49A59 /* MainMenu.xib in Resources */,
 				9E3A2AF713C237A000E49A59 /* AddSong.png in Resources */,
 				D9F96FB52F44E6EF00CA6066 /* Localizable.strings in Resources */,
 				9E3A2AFB13C23D5200E49A59 /* AddFolder.png in Resources */,
@@ -300,34 +292,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA000000000000000000DD02 /* Mp3GainTask.swift in Sources */,
-				AA000000000000000000EE02 /* M3GWindow.swift in Sources */,
-				AA000000000000000000AB02 /* Mp3GainMacAppDelegate.swift in Sources */,
 				AA000000000000000000BB02 /* m3gPreferences.swift in Sources */,
 				AA000000000000000000AA02 /* m3gInputItem.swift in Sources */,
 				AA000000000000000000CC02 /* m3gInputList.swift in Sources */,
-				AA000000000000000000FF02 /* M3GLanguageSelectorController.swift in Sources */,
-				AA000000000000000000GG02 /* M3GPreferencesViewController.swift in Sources */,
+				BB000000000000000000AA02 /* MP3GainApp.swift in Sources */,
+				BB000000000000000000AB02 /* AppViewModel.swift in Sources */,
+				BB000000000000000000AC02 /* ContentView.swift in Sources */,
+				BB000000000000000000AD02 /* PreferencesView.swift in Sources */,
+				BB000000000000000000AE02 /* LanguageSelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9E3A2AEE13C231B400E49A59 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D94C907D2F437916002C5ED4 /* Base */,
-				D94C907D2F437916002C5ED5 /* en */,
-				D94C907D2F437916002C5ED6 /* es */,
-				D91B79C42F603EBA0032DDD6 /* fr */,
-				D91B79C72F603EC10032DDD6 /* de */,
-				D91B79CA2F603EC80032DDD6 /* it */,
-				D9069FB82F635ADC00F390A0 /* el */,
-				D9069FBB2F635AE400F390A0 /* cs */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		D9985E202F5F50E100D55DA7 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -474,7 +452,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 260;
+				CURRENT_PROJECT_VERSION = 288;
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "MP3GainExpress/Base.lproj/MP3GainExpress-Info.plist";
@@ -484,7 +462,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 3.5.0;
+				MARKETING_VERSION = 4.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sappharad.${PRODUCT_NAME:rfc1034identifier}";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "com.sappharad.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MP3GainExpress;
@@ -501,7 +479,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 260;
+				CURRENT_PROJECT_VERSION = 288;
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "MP3GainExpress/Base.lproj/MP3GainExpress-Info.plist";
@@ -511,7 +489,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 3.5.0;
+				MARKETING_VERSION = 4.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sappharad.${PRODUCT_NAME:rfc1034identifier}";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "com.sappharad.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MP3GainExpress;
