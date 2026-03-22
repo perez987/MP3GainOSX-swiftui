@@ -52,5 +52,6 @@ These are the main changes I've made to the project:
 - User interface improvements
 - Sparkle updated to version 2.9.0
 - Language support with language selector (menu language or `⌘ + L`)
-- Translate MP3GainExpress from Objective-C to Swift (step 1)
-- TODO: Translate MP3GainExpress from Swift to SwiftUI (step 2).
+- Translate MP3GainExpress from Objective-C to SwiftUI:
+   - Objective-C → Swift (step 1)
+   - Swift → SwiftUI (step 2).

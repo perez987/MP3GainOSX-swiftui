@@ -6,13 +6,13 @@ Replaces all AppKit/XIB-based UI files with pure SwiftUI equivalents. The model 
 
 | Swift + XIB | SwiftUI |
 |---|---|
-| `Mp3GainMacAppDelegate.swift` (`@NSApplicationMain`) | `MP3GainApp.swift` (`@main struct MP3GainApp: App`) |
+| `Mp3GainMacAppDelegate.swift`<br>(`@NSApplicationMain`) | `MP3GainApp.swift`<br> (`@main struct MP3GainApp: App`) |
 | `Base.lproj/MainMenu.xib` | `Views/ContentView.swift` |
-| `Window/M3GWindow.swift` | removed — no custom `NSWindow` subclass needed |
-| `Preferences/M3GPreferencesViewController.swift` + Preferences XIB | `Views/PreferencesView.swift` |
-| `Language/M3GLanguageSelectorController.swift` + LanguageSelector XIB | `Language/LanguageSelectorView.swift` |
-| Progress / Warning window XIBs | `ProcessingSheetView` and `WarningSheetView` (inline in `ContentView.swift`) |
-| _(none)_ | `Model/AppViewModel.swift` (new `ObservableObject` state layer) |
+| `Window/M3GWindow.swift` | removed, no custom `NSWindow` subclass needed |
+| `Preferences/M3GPreferencesViewController.swift`<br>+ Preferences XIB | `Views/PreferencesView.swift` |
+| `Language/M3GLanguageSelectorController.swift`<br>+ LanguageSelector XIB | `Language/LanguageSelectorView.swift` |
+| Progress / Warning window XIBs | `ProcessingSheetView`<br>+ `WarningSheetView`<br>(inline in `ContentView.swift`) |
+| _(none)_ | `Model/AppViewModel.swift`<br>(new `ObservableObject` state layer) |
 
 ## Translation decisions
 
@@ -32,6 +32,6 @@ Replaces all AppKit/XIB-based UI files with pure SwiftUI equivalents. The model 
 ## Project file
 
 - All XIB `PBXBuildFile`/`PBXFileReference` entries removed
-- New Swift source entries added for `MP3GainApp.swift`, `AppViewModel.swift`, `ContentView.swift`, `PreferencesView.swift`, and `LanguageSelectorView.swift` using the `BB000000000000000000XX` UUID series
+- New Swift source entries added for `MP3GainApp.swift`, `AppViewModel.swift`, `ContentView.swift`, `PreferencesView.swift`, and `LanguageSelectorView.swift`
 - `MACOSX_DEPLOYMENT_TARGET` raised to `13.0` to satisfy `SwiftUI.Table` availability requirement
 - `SWIFT_VERSION` remains `5.0`
