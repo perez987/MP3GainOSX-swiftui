@@ -1,7 +1,7 @@
 MP3GainOSX
 ==========
 
-MP3Gain Express for macOS.
+MP3Gain Express for macOS. Migrated from Objective-C to SwiftUI.
 
 ![Main window](Images/Screenshots/Window1-swiftui.png)
 
