@@ -27,6 +27,7 @@
 		BB000000000000000000AE02 /* LanguageSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000000000000000000AE01 /* LanguageSelectorView.swift */; };
 		D9985E222F5F50E100D55DA7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D9985E202F5F50E100D55DA7 /* Credits.rtf */; };
 		D9B54D132F603C0300D5D009 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = D9B54D122F603C0300D5D009 /* Sparkle */; };
+		D9C9CA9E2F71BA0A00A4C44D /* GlassIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = D9C9CA9D2F71BA0A00A4C44D /* GlassIcon.icon */; };
 		D9F96FB52F44E6EF00CA6066 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9F96FB42F44E6EF00CA6066 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		D9985E212F5F50E100D55DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9985E232F5F50F300D55DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9985E242F5F50F400D55DA7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = es; path = es.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9C9CA9D2F71BA0A00A4C44D /* GlassIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = GlassIcon.icon; sourceTree = "<group>"; };
 		D9F96FB42F44E6EF00CA6068 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D9F96FB42F44E6EF00CA6069 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 				D92A70FC2F42415600A5866C /* aacgain-exe */,
 				9EB6852B1EB839E7003DD377 /* Assets.xcassets */,
 				D9985E202F5F50E100D55DA7 /* Credits.rtf */,
+				D9C9CA9D2F71BA0A00A4C44D /* GlassIcon.icon */,
 				42BD50B5ED9E4011871A419A /* Language */,
 				D92A70F92F4240D500A5866C /* Model */,
 				BB000000000000000000AA01 /* MP3GainApp.swift */,
@@ -276,6 +279,7 @@
 				9EB6852C1EB839E7003DD377 /* Assets.xcassets in Resources */,
 				D9985E222F5F50E100D55DA7 /* Credits.rtf in Resources */,
 				9E46184C1EDBC36100C12330 /* aacgain in Resources */,
+				D9C9CA9E2F71BA0A00A4C44D /* GlassIcon.icon in Resources */,
 				9E3A2AF713C237A000E49A59 /* AddSong.png in Resources */,
 				D9F96FB52F44E6EF00CA6066 /* Localizable.strings in Resources */,
 				9E3A2AFB13C23D5200E49A59 /* AddFolder.png in Resources */,
@@ -442,6 +446,7 @@
 		9E3A2AF413C231B400E49A59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = GlassIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 288;
@@ -469,6 +474,7 @@
 		9E3A2AF513C231B400E49A59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = GlassIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 288;
