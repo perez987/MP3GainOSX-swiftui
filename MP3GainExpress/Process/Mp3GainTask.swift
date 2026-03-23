@@ -156,10 +156,10 @@ class Mp3GainTask: NSObject {
         )
         handle.waitForDataInBackgroundAndNotify(forModes: [.default])
 
-        weak let weakSelf = self
-        weak let weakDetails = details
-        weak let weakStatus = status
-        weak let weakHandle = handle
+        weak var weakSelf = self
+        weak var weakDetails = details
+        weak var weakStatus = status
+        weak var weakHandle = handle
         newTask.terminationHandler = { myself in
             // Remove the notification observer first to prevent dangling pointer issues
             if let s = weakSelf, let h = weakHandle {
