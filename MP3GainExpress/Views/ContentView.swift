@@ -245,6 +245,7 @@ struct ProcessingSheetView: View {
 
 struct WarningSheetView: View {
     @EnvironmentObject var viewModel: AppViewModel
+    @State private var hideWarning: Bool = m3gPreferences.shared.hideWarning
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -256,12 +257,12 @@ struct WarningSheetView: View {
             HStack {
                 Toggle(
                     NSLocalizedString("DontWarnAgain", comment: "Do not show this warning again"),
-                    isOn: Binding(
-                        get: { m3gPreferences.shared.hideWarning },
-                        set: { m3gPreferences.shared.hideWarning = $0 }
-                    )
+                    isOn: $hideWarning
                 )
                 .toggleStyle(.checkbox)
+                .onChange(of: hideWarning) { newValue in
+                    m3gPreferences.shared.hideWarning = newValue
+                }
 
                 Spacer()
 
