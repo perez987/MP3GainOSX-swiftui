@@ -5,6 +5,8 @@ MP3Gain Express for macOS. Migrated from Objective-C to SwiftUI.
 
 ![Main window](Images/Screenshots/Window1-swiftui.png)
 
+![Main window](Images/Screenshots/Window2-swiftui.png)
+
 **Note**: *Paul Kratt* is the developer of MP3GainOSX. This is the content of the original README. At the end you can read the changes I've made to the project.
 
 ## Credits
