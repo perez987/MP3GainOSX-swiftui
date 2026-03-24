@@ -13,6 +13,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            // The four horizontal sections of the window
             fakeToolbar
             Divider()
             topBar
@@ -20,8 +21,8 @@ struct ContentView: View {
             Divider()
             bottomBar
         }
-        .frame(minWidth: 700, idealWidth: 700, maxWidth: 700,
-               minHeight: 500, idealHeight: 500, maxHeight: 700)
+        .frame(minWidth: 760, idealWidth: 760, maxWidth: 760,
+               minHeight: 500, idealHeight: 500, maxHeight: 760)
         .background(VisualEffectView().ignoresSafeArea())
         .sheet(isPresented: $viewModel.isProcessing) {
             ProcessingSheetView().environmentObject(viewModel)
@@ -72,19 +73,19 @@ struct ContentView: View {
                     .lineLimit(1)
                     .truncationMode(.middle)
             }
-            .width(min: 120, ideal: 300)
+            .width(min: 200, ideal: 340)
 
             TableColumn(NSLocalizedString("Volume", comment: "Volume")) { item in
                 Text(volumeText(for: item))
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
-            .width(min: 70, ideal: 90)
+            .width(min: 50, ideal: 60)
 
             TableColumn(NSLocalizedString("Clipping", comment: "Clipping")) { item in
                 Text(clippingText(for: item))
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
-            .width(min: 60, ideal: 70)
+            .width(min: 50, ideal: 60)
 
             TableColumn(NSLocalizedString("Track Gain", comment: "Track Gain")) { item in
                 Text(item.volume > 0 ? String(format: "%.2f dB", item.track_gain) : "")
