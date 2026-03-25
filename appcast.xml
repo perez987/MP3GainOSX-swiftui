@@ -6,16 +6,16 @@
         <language>en</language>
         
        <item>
-            <title>Version 4.0.1</title>
+            <title>Version 4.0.2</title>
         	<link> https://github.com/perez987/MP3GainOSX-swiftui</link>
             <description></description>
-            <pubDate>Tue, 24 Mar 2026 21:24:31 +0000</pubDate>
-            <sparkle:version>290</sparkle:version>
-            <sparkle:shortVersionString>4.0.1</sparkle:shortVersionString>
+            <pubDate>Thu, 26 Mar 2026 21:24:31 +0000</pubDate>
+            <sparkle:version>292</sparkle:version>
+            <sparkle:shortVersionString>4.0.2</sparkle:shortVersionString>
             <enclosure
-                url="https://github.com/perez987/MP3GainOSX-swiftui/releases/download/4.0.1/MP3GainExpress-4.0.1.zip"
-                length="3096907"
-                sparkle:edSignature="jW62CBG64xdZCMOTrmytInpVxuqx+mKz03k71LS0f3KhaEJob+8711Sab40capZ8TmgTF+KncRkebIs5xJ0UCg=="
+                url="https://github.com/perez987/MP3GainOSX-swiftui/releases/download/4.0.2/MP3GainExpress-4.0.2.zip"
+                length="3108618"
+                sparkle:edSignature="7XNyoEJEsg+JFZzEphuq1v9nqcarNoYJFmrrxcRHXL5h+1iBkd1Vyg6XmktjjdI92dTmW872K27FXXn4RJjADw=="
                 type="application/octet-stream"
             />
             <sparkle:minimumSystemVersion>13.5</sparkle:minimumSystemVersion>
