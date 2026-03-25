@@ -21,6 +21,7 @@ class AppViewModel: ObservableObject {
     @Published var progressMax: Double = 1.0
     @Published var statusText: String = ""
     @Published var cancelEnabled: Bool = true
+    @Published var processingLog: [String] = []
     @Published var showWarning: Bool = false
     @Published var showLanguageSelector: Bool = false
     @Published var selectedRows: Set<m3gInputItem.ID> = []
@@ -217,10 +218,17 @@ class AppViewModel: ObservableObject {
         progressMax = Double(inputList.count)
         cancelEnabled = true
         cancelCurrentOperation = false
+        processingLog = []
     }
 
     private func getNumConcurrentTasks() -> Int {
         return m3gPreferences.shared.numProcesses
+    }
+
+    /// Logs the task description and starts processing it.
+    private func startTask(_ task: Mp3GainTask) {
+        processingLog.append(task.getDescription())
+        task.process()
     }
 
     private func doAnalysis(album: Bool) {
@@ -243,7 +251,7 @@ class AppViewModel: ObservableObject {
             tasks.append(task)
         }
         for i in 0..<min(tasks.count, getNumConcurrentTasks()) {
-            tasks[i].process()
+            startTask(tasks[i])
         }
     }
 
@@ -269,7 +277,7 @@ class AppViewModel: ObservableObject {
             tasks.append(task)
         }
         for i in 0..<min(tasks.count, getNumConcurrentTasks()) {
-            tasks[i].process()
+            startTask(tasks[i])
         }
     }
 
@@ -283,7 +291,7 @@ class AppViewModel: ObservableObject {
             tasks.append(task)
         }
         for i in 0..<min(tasks.count, getNumConcurrentTasks()) {
-            tasks[i].process()
+            startTask(tasks[i])
         }
     }
 
@@ -306,7 +314,7 @@ class AppViewModel: ObservableObject {
             } else {
                 for nextTask in replacement {
                     if !nextTask.inProgress && (filesLeft == 1 || nextTask.files.count == 1) {
-                        nextTask.process()
+                        self.startTask(nextTask)
                         break
                     }
                 }

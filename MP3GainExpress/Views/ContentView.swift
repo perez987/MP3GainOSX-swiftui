@@ -218,7 +218,52 @@ struct ProcessingSheetView: View {
     @EnvironmentObject var viewModel: AppViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(spacing: 0) {
+            fileScrollList
+            Divider()
+            bottomControls
+        }
+        .frame(width: 480)
+        .interactiveDismissDisabled(true)
+        .onAppear {
+            viewModel.runPendingOperation()
+        }
+    }
+
+    private var fileScrollList: some View {
+        ScrollViewReader { proxy in
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 3) {
+                    ForEach(Array(viewModel.processingLog.enumerated()), id: \.offset) { _, name in
+                        Text(name)
+                            .font(.system(size: 12))
+                            .lineLimit(1)
+                            .truncationMode(.middle)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 10)
+                        Divider()
+                    }
+                    Color.clear
+                        .frame(height: 1)
+                        .id("scrollBottom")
+                }
+                .padding(.vertical, 6)
+                .frame(width: 428)
+//                .scrollIndicators(.hidden)
+            }
+//            .padding(.top, 12)
+            .frame(height: 200)
+//            .background(.tertiary)
+            .onChange(of: viewModel.processingLog.count) { _ in
+                withAnimation(.easeOut(duration: 0.25)) {
+                    proxy.scrollTo("scrollBottom")
+                }
+            }
+        }
+    }
+
+    private var bottomControls: some View {
+        VStack(alignment: .leading, spacing: 8) {
             Text(viewModel.statusText)
                 .font(.system(size: 13))
 
@@ -234,11 +279,6 @@ struct ProcessingSheetView: View {
             }
         }
         .padding()
-        .frame(width: 430, height: 80)
-        .interactiveDismissDisabled(true)
-        .onAppear {
-            viewModel.runPendingOperation()
-        }
     }
 }
 
