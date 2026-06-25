@@ -29,7 +29,7 @@ MP3Gain is a tool to increase or decrease the volume of MP3 files without re-enc
 
 MP3Gain is LGPL. I guess this port is LGPL then, you should adhere to the terms of that license.
 
-See the orignal website for more details:
+See the original website for more details:
 
 `http://projects.sappharad.com/mp3gain/`
 
