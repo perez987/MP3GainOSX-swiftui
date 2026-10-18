@@ -3,24 +3,26 @@
 //  MP3GainExpress
 //
 
-import SwiftUI
 import AppKit
+import SwiftUI
 
 private struct Language: Identifiable {
     let code: String
     let name: String
     let flag: String
-    var id: String { code }
+    var id: String {
+        code
+    }
 }
 
 private let supportedLanguages: [Language] = [
-    Language(code: "de", name: "Deutsch",   flag: "🇩🇪"),
-    Language(code: "en", name: "English",   flag: "🇬🇧"),
-    Language(code: "es", name: "Español",   flag: "🇪🇸"),
-    Language(code: "fr", name: "Français",  flag: "🇫🇷"),
-    Language(code: "it", name: "Italiano",  flag: "🇮🇹"),
-    Language(code: "cs", name: "Česko",     flag: "🇨🇿"),
-    Language(code: "el", name: "ελληνική",  flag: "🇬🇷")
+    Language(code: "de", name: "Deutsch", flag: "🇩🇪"),
+    Language(code: "en", name: "English", flag: "🇬🇧"),
+    Language(code: "es", name: "Español", flag: "🇪🇸"),
+    Language(code: "fr", name: "Français", flag: "🇫🇷"),
+    Language(code: "it", name: "Italiano", flag: "🇮🇹"),
+    Language(code: "cs", name: "Česko", flag: "🇨🇿"),
+    Language(code: "el", name: "ελληνική", flag: "🇬🇷"),
 ]
 
 struct LanguageSelectorView: View {
@@ -38,10 +40,10 @@ struct LanguageSelectorView: View {
             }
 //            .listStyle(.bordered)
             .overlay(
-                 RoundedRectangle(cornerRadius: 6)
-                     .stroke(.tertiary, lineWidth: 1)
-                     .padding(5)
-             )
+                RoundedRectangle(cornerRadius: 6)
+                    .stroke(.tertiary, lineWidth: 1)
+                    .padding(5)
+            )
             .frame(width: 222, height: CGFloat(supportedLanguages.count) * 36 + 36)
 
             HStack {

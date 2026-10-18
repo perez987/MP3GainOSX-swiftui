@@ -3,8 +3,8 @@
 //  MP3GainExpress
 //
 
-import SwiftUI
 import Darwin
+import SwiftUI
 
 struct PreferencesView: View {
     @State private var numProcesses: Int = m3gPreferences.shared.numProcesses
@@ -24,13 +24,13 @@ struct PreferencesView: View {
                 TextField("", value: $numProcesses, format: .number)
                     .frame(width: 44)
                     .multilineTextAlignment(.center)
-                Stepper("", value: $numProcesses, in: 1...maxCores)
+                Stepper("", value: $numProcesses, in: 1 ... maxCores)
                     .labelsHidden()
             }
             Toggle(NSLocalizedString("Remember Volume settings", comment: ""),
                    isOn: Binding(
-                    get: { m3gPreferences.shared.rememberOptions },
-                    set: { m3gPreferences.shared.rememberOptions = $0 }
+                       get: { m3gPreferences.shared.rememberOptions },
+                       set: { m3gPreferences.shared.rememberOptions = $0 }
                    ))
         }
         .padding()

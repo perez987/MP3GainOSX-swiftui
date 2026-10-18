@@ -3,8 +3,8 @@
 //  MP3GainExpress
 //
 
-import SwiftUI
 import AppKit
+import SwiftUI
 
 // MARK: - Main Content View
 
@@ -281,7 +281,7 @@ struct WarningSheetView: View {
 // MARK: - Visual Effect Background
 
 struct VisualEffectView: NSViewRepresentable {
-    func makeNSView(context: Context) -> NSVisualEffectView {
+    func makeNSView(context _: Context) -> NSVisualEffectView {
         let view = NSVisualEffectView()
         view.blendingMode = .behindWindow
         view.state = .active
@@ -289,5 +289,5 @@ struct VisualEffectView: NSViewRepresentable {
         return view
     }
 
-    func updateNSView(_ nsView: NSVisualEffectView, context: Context) {}
+    func updateNSView(_: NSVisualEffectView, context _: Context) {}
 }

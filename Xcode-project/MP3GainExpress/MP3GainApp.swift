@@ -3,8 +3,8 @@
 //  MP3GainExpress
 //
 
-import SwiftUI
 import AppKit
+import SwiftUI
 
 @main
 struct MP3GainApp: App {
@@ -44,11 +44,11 @@ struct MP3GainApp: App {
 // MARK: - App Delegate
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_: NSApplication) -> Bool {
         return true
     }
 
-    func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
+    func applicationSupportsSecureRestorableState(_: NSApplication) -> Bool {
         return true
     }
 }

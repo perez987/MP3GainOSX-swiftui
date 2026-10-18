@@ -4,8 +4,8 @@
 //
 
 import AppKit
-import UniformTypeIdentifiers
 import Sparkle
+import UniformTypeIdentifiers
 
 class AppViewModel: ObservableObject {
     static let minVolume: Float = 50.0
@@ -13,7 +13,7 @@ class AppViewModel: ObservableObject {
 
     // UI State
     @Published var items: [m3gInputItem] = []
-    @Published var targetVolumeText: String = String(m3gPreferences.defaultDbLevel)
+    @Published var targetVolumeText: String = .init(m3gPreferences.defaultDbLevel)
     @Published var albumGain: Bool = false
     @Published var avoidClipping: Bool = false
     @Published var isProcessing: Bool = false
@@ -25,8 +25,8 @@ class AppViewModel: ObservableObject {
     @Published var showLanguageSelector: Bool = false
     @Published var selectedRows: Set<m3gInputItem.ID> = []
     @Published var showInvalidVolumeAlert: Bool = false
-    // Incremented after each batch completes to force SwiftUI Table to re-read item data
-    @Published var tableVersion: UUID = UUID()
+    /// Incremented after each batch completes to force SwiftUI Table to re-read item data
+    @Published var tableVersion: UUID = .init()
 
     let updaterController: SPUStandardUpdaterController
 
@@ -54,7 +54,8 @@ class AppViewModel: ObservableObject {
         let prefs = m3gPreferences.shared
         if prefs.rememberOptions {
             if let vol = Float(targetVolumeText),
-               vol >= AppViewModel.minVolume && vol <= AppViewModel.maxVolume {
+               vol >= AppViewModel.minVolume, vol <= AppViewModel.maxVolume
+            {
                 prefs.volume = vol
             }
             prefs.noClipping = avoidClipping
@@ -130,7 +131,7 @@ class AppViewModel: ObservableObject {
             panel.allowedContentTypes = [
                 UTType(filenameExtension: "mp3")!,
                 UTType(filenameExtension: "mp4")!,
-                UTType(filenameExtension: "m4a")!
+                UTType(filenameExtension: "m4a")!,
             ]
         } else {
             panel.allowedFileTypes = ["mp3", "mp4", "m4a"]
@@ -226,7 +227,7 @@ class AppViewModel: ObservableObject {
     private func doAnalysis(album: Bool) {
         tasks = []
         if !album || inputList.count == 1 {
-            for i in 0..<inputList.count {
+            for i in 0 ..< inputList.count {
                 let task = Mp3GainTask.task(withFile: inputList.object(at: i), action: .analyze)
                 task.desiredDb = targetVolume
                 task.onProcessingComplete = { [weak task] in
@@ -242,7 +243,7 @@ class AppViewModel: ObservableObject {
             }
             tasks.append(task)
         }
-        for i in 0..<min(tasks.count, getNumConcurrentTasks()) {
+        for i in 0 ..< min(tasks.count, getNumConcurrentTasks()) {
             tasks[i].process()
         }
     }
@@ -250,7 +251,7 @@ class AppViewModel: ObservableObject {
     private func doModify(noClip: Bool, albumMode: Bool) {
         tasks = []
         if !albumMode || inputList.count == 1 {
-            for i in 0..<inputList.count {
+            for i in 0 ..< inputList.count {
                 let task = Mp3GainTask.task(withFile: inputList.object(at: i), action: .apply)
                 task.noClipping = noClip
                 task.desiredDb = targetVolume
@@ -268,21 +269,21 @@ class AppViewModel: ObservableObject {
             }
             tasks.append(task)
         }
-        for i in 0..<min(tasks.count, getNumConcurrentTasks()) {
+        for i in 0 ..< min(tasks.count, getNumConcurrentTasks()) {
             tasks[i].process()
         }
     }
 
     private func undoModify() {
         tasks = []
-        for i in 0..<inputList.count {
+        for i in 0 ..< inputList.count {
             let task = Mp3GainTask.task(withFile: inputList.object(at: i), action: .undo)
             task.onProcessingComplete = { [weak task] in
                 if let t = task { self.handleTaskCompletion(t) }
             }
             tasks.append(task)
         }
-        for i in 0..<min(tasks.count, getNumConcurrentTasks()) {
+        for i in 0 ..< min(tasks.count, getNumConcurrentTasks()) {
             tasks[i].process()
         }
     }
@@ -301,11 +302,11 @@ class AppViewModel: ObservableObject {
             let filesLeft = replacement.count
             if filesLeft == 0 {
                 self.isProcessing = false
-                self.tableVersion = UUID()   // force Table to re-read mutated item data
+                self.tableVersion = UUID() // force Table to re-read mutated item data
                 self.tasks = []
             } else {
                 for nextTask in replacement {
-                    if !nextTask.inProgress && (filesLeft == 1 || nextTask.files.count == 1) {
+                    if !nextTask.inProgress, filesLeft == 1 || nextTask.files.count == 1 {
                         nextTask.process()
                         break
                     }
@@ -320,7 +321,9 @@ class AppViewModel: ObservableObject {
 final class SubfolderAccessoryView {
     private var popup: NSPopUpButton!
 
-    var selectedDepth: Int { popup.indexOfSelectedItem }
+    var selectedDepth: Int {
+        popup.indexOfSelectedItem
+    }
 
     func makeView() -> NSView {
         let view = NSView(frame: NSRect(x: 0, y: 0, width: 356, height: 35))

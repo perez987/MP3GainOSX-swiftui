@@ -17,7 +17,7 @@ class Mp3GainTask: NSObject {
     private var statusPipe: Pipe?
     private var statusHandle: FileHandle?
 
-    // The default aacgain reference level; all dB offsets are relative to this baseline
+    /// The default aacgain reference level; all dB offsets are relative to this baseline
     private static let defaultDbLevel: Double = 89.0
 
     var files: [m3gInputItem] = []
@@ -75,10 +75,10 @@ class Mp3GainTask: NSObject {
         case .analyze:
             analyzeFile()
         case .apply:
-            if files.count == 1 && (!noClipping || files[0].volume == 0) {
-                //Always need 2 passes if NoClipping is off, because we don't get notified about
-                //clipping during the Apply process. Can't trust previous data because they could
-                //change the desired volume on us.
+            if files.count == 1, !noClipping || files[0].volume == 0 {
+                // Always need 2 passes if NoClipping is off, because we don't get notified about
+                // clipping during the Apply process. Can't trust previous data because they could
+                // change the desired volume on us.
                 twoPass = true
                 analyzeFile()
             } else {
@@ -92,9 +92,9 @@ class Mp3GainTask: NSObject {
     func getDescription() -> String {
         if files.isEmpty { return "" }
         if files.count > 1 {
-            //When in Album mode, we always scan the tracks individually so that multiple tracks
-            //can be scanned at the same time. Then we run it again in album mode, which doesn't
-            //need to rescan the files because ReplayGain tags were generated during the initial scan.
+            // When in Album mode, we always scan the tracks individually so that multiple tracks
+            // can be scanned at the same time. Then we run it again in album mode, which doesn't
+            // need to rescan the files because ReplayGain tags were generated during the initial scan.
             return NSLocalizedString("reprocessAlbum", comment: "Process as Album...")
         }
         return files[0].getFilename()
@@ -141,7 +141,7 @@ class Mp3GainTask: NSObject {
         newTask.standardInput = Pipe()
         newTask.standardOutput = details
 
-        //Fun fact: Having status on stderr caused file corruption in previous releases when mp3gain was internal
+        // Fun fact: Having status on stderr caused file corruption in previous releases when mp3gain was internal
         let status = Pipe()
         statusPipe = status
         newTask.standardError = status
@@ -182,7 +182,7 @@ class Mp3GainTask: NSObject {
                 for file in weakSelf?.files ?? [] {
                     if file.state == 0 { file.state = 2 }
                 }
-            } else if myself.terminationStatus == 0 && weakSelf?.twoPass == true && weakSelf?.action == .apply {
+            } else if myself.terminationStatus == 0, weakSelf?.twoPass == true, weakSelf?.action == .apply {
                 weakSelf?.twoPass = false
                 weakSelf?.cleanupTaskAndApply()
             } else {
@@ -193,15 +193,17 @@ class Mp3GainTask: NSObject {
         do {
             try newTask.run()
         } catch {
-            //Failed to launch mp3gain command line tool for some reason.
-            //Add this task to the end of the list if this was the first time it failed,
-            //otherwise remove it and mark it as failed.
+            // Failed to launch mp3gain command line tool for some reason.
+            // Add this task to the end of the list if this was the first time it failed,
+            // otherwise remove it and mark it as failed.
             if failureCount == 1 {
-                for file in files { if file.state == 0 { file.state = 2 } }
+                for file in files {
+                    if file.state == 0 { file.state = 2 }
+                }
             }
             failureCount += 1
             if failureCount == 1 { inProgress = false }
-            onProcessingComplete?() //Not actually complete, but this will check failureCount and requeue.
+            onProcessingComplete?() // Not actually complete, but this will check failureCount and requeue.
         }
     }
 
@@ -225,8 +227,8 @@ class Mp3GainTask: NSObject {
         let lines = details.components(separatedBy: CharacterSet.newlines)
         let numberParse = NumberFormatter()
         numberParse.locale = Locale(identifier: "en_US_POSIX")
-        //The strings we search for are copy/pasted from the source of the mp3gain build we're running
-        //against, so they should be correct.
+        // The strings we search for are copy/pasted from the source of the mp3gain build we're running
+        // against, so they should be correct.
         for line in lines {
             if let range = line.range(of: "Recommended \"Track\" dB change: ") {
                 if let dbChange = numberParse.number(from: String(line[range.upperBound...])) {
@@ -237,12 +239,16 @@ class Mp3GainTask: NSObject {
                     }
                 }
             } else if line.contains("WARNING: some clipping may occur with this gain change!") {
-                for file in files { file.clipping = true }
+                for file in files {
+                    file.clipping = true
+                }
             } else if let range = line.range(of: "Applying auto-clipped mp3 gain change of ") {
                 let searchStart = range.upperBound
-                if let endRange = line.range(of: " to ", options: .literal, range: searchStart..<line.endIndex) {
-                    if let dbChange = numberParse.number(from: String(line[searchStart..<endRange.lowerBound])) {
-                        for file in files { file.track_gain = dbChange.doubleValue }
+                if let endRange = line.range(of: " to ", options: .literal, range: searchStart ..< line.endIndex) {
+                    if let dbChange = numberParse.number(from: String(line[searchStart ..< endRange.lowerBound])) {
+                        for file in files {
+                            file.track_gain = dbChange.doubleValue
+                        }
                     }
                 }
             } else if let range = line.range(of: "Recommended \"Album\" dB change for all files: ") {
@@ -254,9 +260,13 @@ class Mp3GainTask: NSObject {
                     }
                 }
             } else if line.contains("Can't find any valid MP3 frames") || line.contains("MPEG Layer I file, not a layer III file") {
-                for file in files { file.state = 3 }
+                for file in files {
+                    file.state = 3
+                }
             } else if line.contains("is not a valid mp4/m4a file") {
-                for file in files { file.state = 2 }
+                for file in files {
+                    file.state = 2
+                }
                 fatalError = true
             }
         }
@@ -284,21 +294,25 @@ class Mp3GainTask: NSObject {
             }
             fatalError = true
         } else if text.contains("No changes to undo in") || text.contains("No undo information in") {
-            for file in files { file.state = 1 }
-        } else if !fatalError && files.count == 1 && text.count > 4 && text.contains("%") {
+            for file in files {
+                file.state = 1
+            }
+        } else if !fatalError, files.count == 1, text.count > 4, text.contains("%") {
             if let percentIdx = text.firstIndex(of: "%") {
-                let numberStr = String(text[text.startIndex..<percentIdx])
+                let numberStr = String(text[text.startIndex ..< percentIdx])
                 if let progress = NumberFormatter().number(from: numberStr) {
                     onStatusUpdate?(progress.doubleValue)
                 }
             }
-        } else if !fatalError && files.count > 1 && text.count > 4 && text.contains(albumFilesStr) {
+        } else if !fatalError, files.count > 1, text.count > 4, text.contains(albumFilesStr) {
             if let albumRange = text.range(of: albumFilesStr),
-               let bracketIdx = findLeftBracket(in: text, endingBefore: albumRange.lowerBound) {
+               let bracketIdx = findLeftBracket(in: text, endingBefore: albumRange.lowerBound)
+            {
                 let numberStart = text.index(bracketIdx, offsetBy: 1)
                 let numberEnd = text.index(albumRange.lowerBound, offsetBy: -1)
                 if numberStart <= numberEnd,
-                   let progress = NumberFormatter().number(from: String(text[numberStart...numberEnd])) {
+                   let progress = NumberFormatter().number(from: String(text[numberStart ... numberEnd]))
+                {
                     if progress.intValue == files.count {
                         onStatusUpdate?(100.0)
                     } else {

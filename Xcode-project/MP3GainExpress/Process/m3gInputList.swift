@@ -8,7 +8,9 @@ import Foundation
 class m3gInputList: NSObject {
     private var list: [m3gInputItem] = []
 
-    var count: Int { list.count }
+    var count: Int {
+        list.count
+    }
 
     func addObject(_ item: m3gInputItem) {
         let hasAlready = list.contains { $0.filePath?.path == item.filePath?.path }

@@ -3,8 +3,8 @@
 //  MP3GainExpress
 //
 
-import Foundation
 import Darwin
+import Foundation
 
 class m3gPreferences: NSObject {
     // Default target volume level used by aacgain

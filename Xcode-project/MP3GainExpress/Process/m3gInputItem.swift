@@ -11,7 +11,7 @@ class m3gInputItem: NSObject, Identifiable {
     var volume: Double = 0
     var clipping: Bool = false
     var track_gain: Double = 0
-    /*
+    /**
      State values:
      0 - Normal
      1 - Cannot undo
